@@ -1039,6 +1039,16 @@ begin
   Result := GetAckResp() ;
 end ;
 
+function peekM(Address : word) : word ;
+var
+  towrite : AnsiString ;
+  written : dword ;
+begin
+  towrite := inttostrx(F_peekM) + inttostrx(Address) ;
+  WriteFile(ComHandle4D,towrite[1],length(towrite),written, nil) ;
+  Result := GetAckResp() ;
+end ;
+
 function pin_HI(Pin : word) : word ;
 var
   towrite : AnsiString ;
@@ -1077,6 +1087,16 @@ begin
   towrite := inttostrx(F_pin_Set) + inttostrx(Mode) + inttostrx(Pin) ;
   WriteFile(ComHandle4D,towrite[1],length(towrite),written, nil) ;
   Result := GetAckResp() ;
+end ;
+
+procedure pokeM(Address : word; WordValue : word) ;
+var
+  towrite : AnsiString ;
+  written : dword ;
+begin
+  towrite := inttostrx(F_pokeM) + inttostrx(Address) + inttostrx(WordValue) ;
+  WriteFile(ComHandle4D,towrite[1],length(towrite),written, nil) ;
+  GetAck() ;
 end ;
 
 procedure putCH(WordChar : word) ;

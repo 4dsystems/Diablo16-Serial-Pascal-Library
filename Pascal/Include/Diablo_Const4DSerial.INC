@@ -102,10 +102,12 @@
  F_media_WrSector = 23;
  F_mem_Free = -417;
  F_mem_Heap = -418;
+ F_peekM = 39;
  F_pin_HI = -113;
  F_pin_LO = -114;
  F_pin_Read = -116;
  F_pin_Set = -112;
+ F_pokeM = 40;
  F_putCH = -2;
  F_putstr = 24;
  F_readString = 34;
