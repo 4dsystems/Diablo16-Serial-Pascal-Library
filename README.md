@@ -16,3 +16,8 @@ Note - this library may need porting to your specific platform as not all Pascal
 ## Example Program
 
 Please load and compile the BigDemo program to run a large demo, demonstrating a majority of the functions and features the library provides.
+
+## Questions/Issues?
+
+Please sign up for our Forum and ask a question there, or submit a Tech Support Ticket from our website.
+http://forum.4dsystems.com.au or http://www.4dsystems.com.au/support
